@@ -1,0 +1,233 @@
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --bright-blue-trans: hsla(245, 75%, 52%, 80%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --desaturated-blue-trans: hsla(224, 23%, 55%, .05);
+    --dark-blue: hsl(223, 47%, 23%);
+
+
+    --red-hat: 'Red Hat Display', sans-serif;
+}
+
+/*Página e corpo do componente*/
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    font-family: var(--red-hat);
+    background-color: var(--pale-blue);
+}
+
+.imagem-background{
+    height: 27.3125rem;
+    width: 100%;
+    position: absolute;
+    background-image: url("/assets/images/pattern-background-desktop.svg");
+    z-index: 1;
+}
+
+.componente {
+    width: 25.9375rem;
+    height: 39.3125rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    z-index: 2;
+    border-radius: 1.25rem;
+    background: #FFF;
+    box-shadow: 0 17px 17px -5px rgba(0, 0, 0, 0.25);
+}
+
+/*Conteúdo*/
+
+.imagem-principal {
+    width: 25.9375rem;
+    height: 13.75rem;
+    border-radius: 1.25rem 1.25rem 0 0;
+    background: url("/assets/images/illustration-hero.svg") no-repeat;
+}
+
+.titulo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    align-self: center;
+    margin: 2.19rem 0 0 0;
+}
+
+.descricao {
+    width: 17.3125rem;
+    text-align: center;
+    margin: .75rem 0 0 0;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--desaturated-blue);
+}
+/**/
+.plano-container {
+    width: 21.0625rem;
+    height: 5.5rem;
+    border-radius: 0.8125rem;
+    background: var(--desaturated-blue-trans);
+    display: flex;
+    align-items: center;
+    margin: 1.06rem 0 0 0;
+}
+
+.plano-icone {
+    width: 3rem;
+    height: 3rem;
+    margin: auto 1rem auto 1.2rem;
+    background: url("/assets/images/icon-music.svg") no-repeat;
+}
+
+.plano-descricao {
+    display: flex;
+    flex-direction: column;
+}
+
+.plano-nome {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    margin: 0 0 .2rem 0;
+}
+
+
+.plano-preco {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    margin:.2rem 0 0  0;
+    color: var(--desaturated-blue);
+}
+
+.botao-mudar {
+    background: none;
+    border: none;
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin: 0 0 0 5.94rem;
+    cursor: pointer;
+    color: var(--bright-blue);
+    text-decoration: underline;
+}
+
+.botao-mudar:hover, .botao-mudar:focus {
+    color: #3829E07F;
+    text-decoration: none;
+}
+/**/
+.botao-prosseguir {
+    width: 21.0625rem;
+    height: 3.1875rem;
+    border-radius: 0.8125rem;
+    border: none;
+    margin-top: 1.56rem;
+    background: var(--bright-blue);
+    box-shadow: 0 6px 11px 0 rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    /*Texto*/
+    font: 700 0.9375rem var(--red-hat);
+    color: #FFFFFF;
+}
+
+.botao-prosseguir:hover, .botao-prosseguir:focus {
+    background: var(--bright-blue-trans);
+}
+
+.botao-cancelar {
+    background: none;
+    border: none;
+    margin-top: 1.87rem;
+    cursor: pointer;
+    /*texto*/
+    font: 900 1rem var(--red-hat);
+    color: var(--desaturated-blue);
+}
+
+.botao-cancelar:hover, .botao-cancelar:focus {
+    color: var(--dark-blue);
+}
+/**/
+.attribution {
+    text-align: center;
+}
+
+@media screen and (max-width: 376px) {
+    .imagem-background {
+        background: url("/assets/images/pattern-background-mobile.svg") no-repeat;
+    }
+
+    .componente{
+        width: 19.125rem;
+        height: 32.70919rem;
+    }
+    /*Conteúdo*/
+    .imagem-principal {
+        width: 19.125rem;
+        height: 9.375rem;
+        background-size: cover;
+    }
+
+    .titulo {
+        font-size: 1.375rem;
+        font-weight: 700;
+    }
+
+    .descricao {
+        width: 16rem;
+        font-size: 0.9375rem;
+        font-weight: 300;
+    }
+    /**/
+    .plano-container {
+        width: 17.1875rem;
+        height: 4.6875rem;
+    }
+
+    .plano-icone {
+        width: 2.5rem;
+        height: 2.5rem;
+        background-size: cover;
+        margin: 0;
+    }
+
+    .plano-descricao {
+        display: flex;
+        flex-direction: column;
+        margin-left: .84rem;
+    }
+
+    .plano-nome {
+        font-size: 0.875rem;
+        margin: 0;
+    }
+
+    .plano-preco {
+        font-size: 0.875rem;
+        margin: 0;
+    }
+
+    .botao-mudar {
+        margin-left: 4rem;
+    }
+
+    /**/
+    .botao-prosseguir {
+        width: 17.21038rem;
+        height: 3.1875rem;
+        font-size: 0.9375rem;
+    }
+
+    .botao-cancelar {
+        margin-top: 1.5rem;
+    }
+
+    /**/
+    .attribution {
+        display: none;
+    }
+}
